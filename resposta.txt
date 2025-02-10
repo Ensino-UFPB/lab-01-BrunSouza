@@ -1,1 +1,95 @@
-Coloque aqui todas as respostas das práticas indicadas no README.md
+Questão 01 - Route
+
+1. 255.255.0.0(/16)
+
+2. 172.18.0.1
+
+3. duas rotas, a padrão e a interna do docker.
+
+
+Questão 02 - IP (ipconfig/ifconfig)
+
+1. 172.18.0.2
+
+2. 172.18.0.0 e a máscara é 255.255.0.0(/16)
+
+3. o nome da rede principal é eth0
+
+
+Questão 03 - nslookup
+
+Google - 172.217.30.36
+
+White House -  192.0.66.51
+
+RNP - 104.18.27.22
+
+UFPB -  150.165.254.52
+
+
+Questão 04 - ping
+
+1. 
+
+a) ping do loopback - varia entre 0.032 ms e 0.065 ms.
+
+b) ping do container - varia entre 0.032 ms e 0.123 ms. com uma média aproximada entre 0.033 ms e 0.045 ms
+
+2. 
+
+a) ping da UFPB.br - varia entre 25.378 ms e 41.939 ms. Com média aproximada entre 36.141 ms e 41.751 ms.
+
+b) ping do yahoo - variam entre 58.083 ms e 60.000 ms.Com média aproximada entre 58.337 ms e 58.863 ms
+
+c) ping do brasil.gov - variam entre 74.565 ms e 76.276 ms. Com média aproximada entre 75.386 ms e 75.962 ms.
+
+d) ping do dce.ufpb.br - é inacessível com a seguinte mensagem aparecendo "ping: unknown host".
+
+3.
+
+Google: variam entre 57.616 ms e 58.693 ms, com média aproximada entre 57.616 ms e 58.316 ms.
+
+RNP: variam entre 57.715 ms e 58.970 ms, com média aproximada entre 57.715 ms e 58.689 ms.
+
+White House: variam entre 57.621 ms e 59.346 ms, com média aproximada entre 58.144 ms e 58.848 ms.
+
+As diferenças no tempo podem se dá devido à distância física dos servidores, visto que quanto mais longe estiverem, maior tende a ser o ping. 
+Também pode-se citar:
+
+* O desempenho do servidor destino, afinal, servidores mais rápidos ou menos sobrecarregados podem responder mais rapidamente;
+* Caminho da rede, pois se o tráfego passar por mais roteadores ou por redes congestionadas, o tempo de resposta será mais alto.
+
+
+Questão 05 - traceroute
+
+a) Muitos roteadores não respondem por questões de segurança, afinal, é perigoso expor seu IP na rede.
+
+b) Não necessariamente, pois a rede pode estar funcionando perfeitamente, mas o roteador pode estar configurado para ignorar 
+pacotes ICMP ou não responder a esses tipos de consultas.
+
+
+Questão 06 - netstat
+
+a) Não, pois netstat pode fornecer informações mais detalhadas sobre a rede.
+
+b) Sim, por exemplo: MSS, Window e irtt.
+
+
+Questão 07 - telnet
+
+1. O servidor respondeu e está ativo. visto que foi possível se conectar com ele.
+
+2. Não foi possível se conectar. Neste caso específico, o problema está relacionado à resolução de nome (DNS), o que significa que a rede ou o 
+servidor DNS não estão conseguindo traduzir www.dce.ufpb.br para um endereço IP, indicando que não é um problema com o serviço da porta 21, mas sim
+com a rede ou configuração DNS.
+
+
+Questaõ 08 - mtr
+
+2. O MTR é uma ferramenta útil para diagnosticar falhas de conectividade, analisar o desempenho da rede em tempo real e identificar problemas em 
+roteadores intermediários. Ele permite monitorar perdas de pacotes e latência, além de otimizar o tráfego ao identificar rotas ineficientes. Usado para monitoramento contínuo, 
+o MTR ajuda a detectar problemas intermitentes, tornando-se essencial no gerenciamento de redes e na resolução de problemas de desempenho.
+
+4. O MTR ajuda a identificar problemas na rede, mostrando onde há perda de pacotes, alta latência ou instabilidade. Se algum salto mostrar perda de pacotes, pode indicar 
+congestionamento ou falha em roteadores. Já variações na latência podem apontar instabilidade na rede. Com esses dados, é possível entender melhor onde os problemas estão e 
+agir para melhorar o desempenho da rede.
